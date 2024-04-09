@@ -1,6 +1,6 @@
 
 all:
-	g++ --std=c++11 HashedDictionary.cpp main.cpp -o test.exe
+	g++ --std=c++11 main.cpp Entry.cpp HashedEntry.cpp HashedDictionary.cpp -Wall -o a.out
 
 test:
-	./test.exe
+	./a.out

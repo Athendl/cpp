@@ -36,7 +36,7 @@ int main() {
         readOnePerson(infile, tempPerson);
     }
 
-    //h.display();
+    h.display();
     cout << "This is a test." << endl;
 }
 

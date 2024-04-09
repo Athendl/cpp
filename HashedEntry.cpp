@@ -1,3 +1,5 @@
+#ifndef __HASHEDENTRY_CPP
+#define __HASHEDENTRY_CPP
 #include "HashedEntry.h"
 
 template<class KeyType, class ItemType>
@@ -21,3 +23,4 @@ template<class KeyType, class ItemType>
 HashedEntry<KeyType, ItemType> *HashedEntry<KeyType, ItemType>::getNext() const {
     return nextPtr;
 }
+#endif

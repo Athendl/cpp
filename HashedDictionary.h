@@ -34,6 +34,7 @@ public:
     bool contains(const KeyType &searchKey) const override;
 
     // Add any additional member functions as necessary
+    void display() const;
 };
 
 #endif

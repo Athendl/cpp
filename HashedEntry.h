@@ -7,7 +7,7 @@ template<class KeyType, class ItemType>
 class HashedEntry : public Entry<KeyType, ItemType> {
     private:
        HashedEntry<KeyType, ItemType>* nextPtr;
-   
+
     public:
        HashedEntry();
        HashedEntry(ItemType newEntry, KeyType searchKey);
@@ -16,6 +16,5 @@ class HashedEntry : public Entry<KeyType, ItemType> {
        void setNext(HashedEntry<KeyType, ItemType>* nextEntryPtr);
        HashedEntry<KeyType, ItemType>* getNext() const;
 };
-
 #include "HashedEntry.cpp"
 #endif

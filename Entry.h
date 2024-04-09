@@ -6,10 +6,10 @@ class Entry {
     private:
        ItemType item;
        KeyType searchKey;
-   
+
     protected:
        void setKey(const KeyType& searchKey);
-   
+
     public:
        Entry();
        Entry(ItemType newEntry, KeyType searchKey);
@@ -17,6 +17,5 @@ class Entry {
        KeyType getKey() const;
        void setItem(const ItemType& newEntry);
 };
-
 #include "Entry.cpp"
 #endif

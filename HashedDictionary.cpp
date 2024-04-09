@@ -1,5 +1,6 @@
 #include "HashedDictionary.h"
 #include <stdexcept>
+#include <iostream>
 
 template<class KeyType, class ItemType>
 int HashedDictionary<KeyType, ItemType>::getHashIndex(const KeyType &searchKey) const {
@@ -129,3 +130,15 @@ bool HashedDictionary<KeyType, ItemType>::contains(const KeyType &searchKey) con
     return false;
 }
 
+template<class KeyType, class ItemType>
+void HashedDictionary<KeyType, ItemType>::display() const {
+    for (int i = 0; i < hashTableSize; ++i) {
+        HashedEntry<KeyType, ItemType> *p = hashTable[i];
+        std::cout << "\nH[" << i << "]:" << std::endl;
+        while (p != nullptr) {
+            std::cout << "key[" << p->getKey() << "]=" << p->getItem() << std::endl;
+            p = p->getNext();
+        }
+        std::cout << std::endl;
+    }
+}

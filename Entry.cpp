@@ -1,7 +1,7 @@
+#ifndef __ENTRY_CPP
+#define __ENTRY_CPP
 #include "Entry.h"
-
-template<class KeyType, class ItemType>
-Entry<KeyType, ItemType>::Entry() {}
+template<class KeyType, class ItemType> Entry<KeyType, ItemType>::Entry() {}
 
 template<class KeyType, class ItemType>
 Entry<KeyType, ItemType>::Entry(ItemType newEntry, KeyType searchKey) : item(newEntry), searchKey(searchKey) {}
@@ -25,3 +25,5 @@ template<class KeyType, class ItemType>
 void Entry<KeyType, ItemType>::setKey(const KeyType &searchKey) {
     this->searchKey = searchKey;
 }
+
+#endif
